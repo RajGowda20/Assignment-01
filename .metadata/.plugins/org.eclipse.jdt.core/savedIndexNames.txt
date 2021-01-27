@@ -1,0 +1,2 @@
+INDEX VERSION 1.131+E:\Eclipse-MyLearnings\Assignment-01\.metadata\.plugins\org.eclipse.jdt.core
+3582174609.index
