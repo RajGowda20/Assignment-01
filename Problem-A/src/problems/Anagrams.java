@@ -23,6 +23,7 @@ public class Anagrams {
 
 	public static void main(String[] args) {
 
+		long startTime = System.currentTimeMillis();
 		// Input to for Grouping the Anagrams
 		String[] input = { "CAT", "DOG", "TAC", "MAD", "DAM", "AMD", "GOD", "SET" };
 
@@ -71,6 +72,10 @@ public class Anagrams {
 		});
 		
 		System.out.println(finalAnagrams.toString());
+		long endTime = System.currentTimeMillis();
+		System.out.println("Duration: "+(endTime-startTime));//Duration: 104, 108, 97, 103, 142, 107, 106, 130, 101
+
+
 	}
 
 }
