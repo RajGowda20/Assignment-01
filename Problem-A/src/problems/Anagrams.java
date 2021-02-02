@@ -25,7 +25,7 @@ public class Anagrams {
 
 		long startTime = System.currentTimeMillis();
 		// Input to for Grouping the Anagrams
-		String[] input = { "CAT", "DOG", "TAC", "MAD", "DAM", "AMD", "GOD", "SET" };
+		String[] input = { "CAT", "DOG", "TAC", "mad", "DAM", "AMD", "god", "SET" };
 
 		//Making a copy of the input arrays of String
 		List<String> originalCopy = Arrays.asList(input);
@@ -41,7 +41,7 @@ public class Anagrams {
 		}).collect(Collectors.toList());
 
 		Map<String, List<Integer>> groupedAnagrams = new LinkedHashMap<>();
-
+	
 		/*
 		 * Grouping the Anagrams and collecting their indices if repeated
 		 */
@@ -66,16 +66,30 @@ public class Anagrams {
 			List<Integer> indices = z.getValue();
 			List<String> groupedAnagrams2 = new LinkedList<String>();
 			for(Integer index: indices) {
-				groupedAnagrams2.add(originalCopy.get(index));
+//				String x = originalCopy.get(index);
+//				if(x.toLowerCase().equals(originalCopy.get(index))) {
+					groupedAnagrams2.add(originalCopy.get(index));
+//				}
 			}
-			finalAnagrams.add(groupedAnagrams2);
+//			if(groupedAnagrams2.size() != 0) {
+				finalAnagrams.add(groupedAnagrams2);
+
+//			}
+			
 		});
 		
+		
+//		finalAnagrams
+
+//		
+//		for(List<String> x: finalAnagrams) {
+//			System.out.println(x+" Size: "+x.size());
+//		}
 		System.out.println(finalAnagrams.toString());
 		long endTime = System.currentTimeMillis();
 		System.out.println("Duration: "+(endTime-startTime));//Duration: 104, 108, 97, 103, 142, 107, 106, 130, 101
 
-
+		
 	}
 
 }
